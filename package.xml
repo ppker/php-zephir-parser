@@ -35,8 +35,6 @@
       <file name="config.w32" role="src" />
       <file name="config.m4" role="src"  />
       <file name="parser.mk" role="src"  />
-      <file name="parser/parser.c" role="src"  />
-      <file name="parser/scanner.c" role="src"  />
       <file name="parser/parser.h" role="src"  />
       <file name="parser/scanner.h" role="src"  />
       <file name="parser/xx.h" role="src"  />
