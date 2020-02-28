@@ -124,3 +124,33 @@ jobs:
           file: ./lcov.info
           flags: unittests
           fail_ci_if_error: false
+
+  pecl:
+    runs-on: ubuntu-latest
+    name: Create pecl package and compile
+    steps:
+      - name: Install PHP 7.4
+        uses: shivammathur/setup-php@v1
+        with:
+          php-version: '7.4'
+          coverage: none
+
+      - name: Create pecl package
+        id: pecl_create
+        run: |
+          pecl package
+          zephir_package="`ls | grep zephir_parser-*tgz`"
+          mv $zephir_package zephir-parser-pecl.tgz
+
+      - name: Validate pecl package
+        run: pecl package-validate zephir-parser-pecl.tgz
+
+      - uses: actions/upload-artifact@v1
+        with:
+          name: 'zephir-parser-pecl'
+          path: zephir-parser-pecl.tgz
+
+      - name: Install package
+        run: |
+          export MAKEFLAGS="-j$(getconf _NPROCESSORS_ONLN)"
+          sudo pecl -v install zephir-parser-pecl.tgz

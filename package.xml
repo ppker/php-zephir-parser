@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.10.5" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+  <name>zephir_parser</name>
+  <channel>pecl.php.net</channel>
+  <summary>The Zephir Parser delivered as a C extension for the PHP language.</summary>
+  <description>
+      Zephir is an open source, high-level/domain specific language designed to ease the creation and maintainability of extensions for PHP, with a focus on type and memory safety.
+  </description>
+  <lead>
+    <name>Ruud Boon</name>
+    <user>ruudboon</user>
+    <email>ruud@ruudboon.io</email>
+    <active>yes</active>
+  </lead>
+  <date>2019-12-10</date>
+  <time>18:00:00</time>
+  <version>
+    <release>1.3.3</release>
+    <api>1.3.3</api>
+  </version>
+  <stability>
+    <release>stable</release>
+    <api>stable</api>
+  </stability>
+  <license uri="https://github.com/phalcon/php-zephir-parser/blob/development/LICENSE">MIT License</license>
+  <notes>
+    Full changelog can be found at: https://github.com/phalcon/php-zephir-parser/blob/master/CHANGELOG.md
+
+    # [1.1.3]
+    ## Added
+    - Added PHP 7.4 support
+  </notes>
+  <contents>
+    <dir name="/">
+      <file name="config.w32" role="src" />
+      <file name="config.m4" role="src"  />
+      <file name="parser.mk" role="src"  />
+      <file name="parser/parser.c" role="src"  />
+      <file name="parser/scanner.c" role="src"  />
+      <file name="parser/parser.h" role="src"  />
+      <file name="parser/scanner.h" role="src"  />
+      <file name="parser/xx.h" role="src"  />
+      <file name="parser/zephir.h" role="src"  />
+      <file name="zephir_parser.c" role="src"  />
+      <file name="zephir_parser.h" role="src" />
+      <file name="LICENSE" role="doc" />
+      <file name="CHANGELOG.md" role="doc" />
+      <file name="CODE_OF_CONDUCT.md" role="doc" />
+      <file name="CREDITS" role="doc" />
+    </dir>
+  </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>7.0.0</min>
+        <max>8.0.0</max>
+      </php>
+      <pearinstaller>
+        <min>1.4.0</min>
+      </pearinstaller>
+    </required>
+  </dependencies>
+  <providesextension>zephir_parser</providesextension>
+  <extsrcrelease/>
+</package>
