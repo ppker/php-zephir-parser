@@ -134,6 +134,7 @@ jobs:
         with:
           php-version: '7.4'
           coverage: none
+          tools: pecl
 
       - name: Create pecl package
         id: pecl_create
