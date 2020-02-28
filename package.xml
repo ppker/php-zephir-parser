@@ -38,7 +38,6 @@
       <file name="parser/parser.h" role="src"  />
       <file name="parser/scanner.h" role="src"  />
       <file name="parser/xx.h" role="src"  />
-      <file name="parser/zephir.h" role="src"  />
       <file name="zephir_parser.c" role="src"  />
       <file name="zephir_parser.h" role="src" />
       <file name="LICENSE" role="doc" />
